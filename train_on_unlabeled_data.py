@@ -11,10 +11,10 @@ def changeModelDir():
 
 if __name__ == "__main__":
 
-    # # Load the previously trained YOLO model
-    # model = YOLO("runs/train/exp/weights/best.pt")
-    #
-    # # Continue training with the new dataset
-    # model.train(data="data_unlabeled.yaml", epochs=10, imgsz=256, device=0)
+    # Load the previously trained YOLO model
+    model = YOLO("best.pt")
+
+    # Continue training with the new dataset
+    model.train(data="data_unlabeled.yaml", epochs=70, imgsz=256, device=0)
 
     changeModelDir()

@@ -35,7 +35,7 @@ def makePseudoLabels():
             confidence = box.conf[0]
             class_id = box.cls[0]
             class_name = model.names[int(class_id)]
-            if confidence > 0.7:
+            if confidence >= 0.7:
                 data = [x1, y1, x2, y2, 0, 256]
                 data = min_max_normalize(data)
                 x1, y1, x2, y2 = data[:4]
