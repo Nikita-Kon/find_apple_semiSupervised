@@ -1,0 +1,7 @@
+path: C:\Users\Aser\PycharmProjects\torch-yolo\find_apple_semiSupervised\apples_learning
+
+train: trainUnlabeled\images
+val: trainUnlabeled\images
+
+names: 
+  0: apple
