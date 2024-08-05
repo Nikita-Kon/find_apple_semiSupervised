@@ -15,6 +15,6 @@ if __name__ == "__main__":
     model = YOLO("best.pt")
 
     # Continue training with the new dataset
-    model.train(data="data_unlabeled.yaml", epochs=70, imgsz=256, device=0)
+    model.train(data="data_labeled.yaml", epochs=70, imgsz=256, device=0 )
 
     changeModelDir()
