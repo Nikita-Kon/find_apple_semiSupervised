@@ -54,7 +54,7 @@ def makePseudoLabels(source_directory, dataset_directory):
                         res_string = f"0 {x1} {y1} {x2} {y1} {x2} {y2} {x1} {y2}"
                         file.write(res_string + '\n')
 
-images_directory = r"C:\Users\Aser\PycharmProjects\torch-yolo\find_apple_semiSupervised\apples_learning\unlabeled_images\images"
-dataset_directory = "C:\\Users\\Aser\\PycharmProjects\\torch-yolo\\find_apple_semiSupervised\\apples_learning\\trainLabeled"
-makePseudoLabels(images_directory, dataset_directory)
+# images_directory = r"C:\Users\Aser\PycharmProjects\torch-yolo\find_apple_semiSupervised\apples_learning\unlabeled_images\images"
+# dataset_directory = "C:\\Users\\Aser\\PycharmProjects\\torch-yolo\\find_apple_semiSupervised\\apples_learning\\trainLabeled"
+# makePseudoLabels(images_directory, dataset_directory)
 
