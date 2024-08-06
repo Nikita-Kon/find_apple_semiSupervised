@@ -1,6 +1,8 @@
 Semi-Supervised Learning for Apple Detection Using YOLO
 
-Overview:
+How to use: The main logic are shown in main.py, so this is start point in your adventure
+
+Overview
 This project aims to develop and test functions for semi-supervised learning to improve apple detection using the YOLO (You Only Look Once) object detection model. The semi-supervised learning approach leverages both labeled and unlabeled data to enhance the model's performance.
 
 Objectives:
