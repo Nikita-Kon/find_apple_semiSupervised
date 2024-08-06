@@ -7,7 +7,7 @@ def min_max_normalize(data):
     return (data - min_val) / (max_val - min_val)
 
 model = YOLO(r"best.pt")
-frame = cv2.imread(r"C:\Users\Aser\Desktop\grid_image.png")
+frame = cv2.imread(r"C:\Users\Aser\Downloads\archive\testA\n07740461_11871.jpg")
 
 result = model.predict(source=frame)
 

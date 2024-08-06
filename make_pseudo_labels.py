@@ -23,7 +23,7 @@ def picturesAmount(source_directory):
     size = len(image_paths)
     return size
 # make pseudo data
-def makePseudoLabels(source_directory, dataset_directory):
+def makePseudoLabels(source_directory, dataset_directory, conf):
     # load model
     model = YOLO(r"best.pt")
     # read pictures
@@ -39,7 +39,7 @@ def makePseudoLabels(source_directory, dataset_directory):
             confidence = box.conf[0]
             class_id = box.cls[0]
             class_name = model.names[int(class_id)]
-            if confidence >= 0.6:
+            if confidence >= conf:
                 data = [x1, y1, x2, y2, 0, 256]
                 data = min_max_normalize(data)
                 x1, y1, x2, y2 = data[:4]
