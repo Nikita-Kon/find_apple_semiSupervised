@@ -19,18 +19,16 @@ def changeModelDir():
         shutil.copy2(trained_model_path, destination)
 
 def trainOnLabeledData():
-    if __name__ == "__main__":
-        if os.path.exists(r"C:\Users\Aser\PycharmProjects\torch-yolo\find_apple_semiSupervised\runs\detect"):
-            shutil.rmtree(r"C:\Users\Aser\PycharmProjects\torch-yolo\find_apple_semiSupervised\runs\detect")
-        model = YOLO("yolov8n.yaml")
-        model.train(data="data_labeled.yaml", epochs=70, imgsz=256, device=0, pretrained=False)
-        changeModelDir()
+    if os.path.exists(r"C:\Users\Aser\PycharmProjects\torch-yolo\find_apple_semiSupervised\runs\detect"):
+        shutil.rmtree(r"C:\Users\Aser\PycharmProjects\torch-yolo\find_apple_semiSupervised\runs\detect")
+    model = YOLO("yolov8n.yaml")
+    model.train(data="data_labeled.yaml", epochs=60, imgsz=256, device=0, pretrained=False)
+    changeModelDir()
 
 def trainOnMixedData():
-    if __name__ == "__main__":
-        # Load the previously trained YOLO model
-        model = YOLO("best.pt")
-        #train with the new dataset
-        model.train(data="data_labeled.yaml", epochs=70, imgsz=256, device=0 )
-        # change model directory into project root
-        changeModelDir()
+    # Load the previously trained YOLO model
+    model = YOLO("best.pt")
+    #train with the new dataset
+    model.train(data="data_labeled.yaml", epochs=60, imgsz=256, device=0 )
+    # change model directory into project root
+    changeModelDir()

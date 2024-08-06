@@ -18,13 +18,16 @@ def min_max_normalize(data):
     max_val = np.max(data, axis=0)
     return (data - min_val) / (max_val - min_val)
 
+def picturesAmount(source_directory):
+    image_paths = get_image_paths(source_directory)
+    size = len(image_paths)
+    return size
 # make pseudo data
 def makePseudoLabels(source_directory, dataset_directory):
     # load model
     model = YOLO(r"best.pt")
     # read pictures
     image_paths = get_image_paths(source_directory)
-
     for image_path in image_paths:
         image = cv2.imread(image_path)
         # predict
